@@ -1,0 +1,7 @@
+name: amplicon_sequevars_to_dict
+owner: diane
+description: Sorts nucleotide fasta sequences into a dictionary according to unique sequences.
+homepage_url: https://github.com/DiDigsDNA/amplicon_sequevars_to_dict
+long_description: Sorts nucleotide fasta sequences into a dictionary that maps unique sequences to lists of sequence records sharing the sequence. Excludes sequences matching those from in an optional fasta file of sequences to ignore. Outputs a fasta containing a representative member of each unique sequence and a textual summary of sequence groupings.
+remote_repository_url: https://github.com/DiDigsDNA/amplicon_sequevars_to_dict
+type: unrestricted
