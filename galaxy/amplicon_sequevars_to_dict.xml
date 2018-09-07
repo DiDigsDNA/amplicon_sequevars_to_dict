@@ -1,0 +1,35 @@
+<tool id="amplicon_sequevars_to_dict" name="Amplicon Sequevars To Dictionary" version="0.0.1">
+  <requirements>
+    <requirement type="package" version="1.70">biopython</requirement>
+  </requirements>
+  <command detect_errors="exit_code"><![CDATA[
+    $__tool_directory__/amplicon_sequevars_to_dict.py
+    '$input_fasta'
+    '$oligo_def_file'
+    '$output_fasta'
+    '$output_txt'
+  ]]></command>
+  <inputs>
+    <param name="input_fasta" format="fasta" type="data" />
+    <param name="oligo_def_file" format="csv" type="data" />
+  </inputs>
+  <outputs>
+      <data format="fasta" name="output_fasta"></data>
+      <data format="txt" name="output_txt"></data>
+  </outputs>
+  <tests>
+    <test>
+      <param name="input_fasta" value="amplicons.fasta" />
+      <param name="oligo_def_file" value="Flu4plex_FluA_oligo_definitions.csv" />
+      <output name="output_fasta" value="output.fasta" />
+      <output name="output_txt" value="output.txt" />
+    </test>
+  </tests>
+  <help><![CDATA[
+    Sorts a fasta file of PCR amplicons into unique sequence groupings (ignoring any present in a trusted sequence'safelist') and outputs sequevars (fasta) and a summary (txt).
+  ]]></help>
+  <citations>
+  </citations>
+</tool>
+
+#NEEDS MODIFICATIONS!!!
